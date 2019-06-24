@@ -134,7 +134,7 @@ plt.show()
 plt.plot(hist.history['mean_absolute_error'])
 plt.plot(hist.history['val_mean_absolute_error'])
 plt.title('Model Error')
-plt.ylabel('Accuracy')
+plt.ylabel('Error')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Val'], loc='lower right')
 plt.show()
@@ -145,7 +145,7 @@ NN_model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['mean_ab
 
 predictions = NN_model.predict(test)
 
-#loss, acc = NN_model.evaluate(X_test, Y_test)
+# Comparing with other ML Algorithms
 
 train_X, val_X, train_y, val_y = train_test_split(train, target, test_size = 0.25, random_state = 14)
 
